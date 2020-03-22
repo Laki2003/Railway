@@ -32,9 +32,15 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="AVION.h" />
 		<Unit filename="FIP CARDS.h" />
 		<Unit filename="INTERAIL.h" />
+		<Unit filename="KUPE.h" />
+		<Unit filename="RESTORAN.h" />
+		<Unit filename="TICKET.h" />
+		<Unit filename="VAGON.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="ruta.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />

@@ -45,6 +45,10 @@ public:
   datumisteka = fip.datumisteka;
   drzava = fip.drzava;
     }
+    void iskoristikupon()
+    {
+        --brojkupona;
+    }
 };
 
 

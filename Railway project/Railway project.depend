@@ -5,3 +5,26 @@
 
 1584815165 c:\projekti\c projects\railway project\fip cards.h
 
+1584891965 source:c:\users\eho 3\desktop\git\railway\railway project\main.cpp
+	<iostream>
+	"FIP CARDS.h"
+	"INTERAIL.h"
+	"VAGON.h"
+
+1584863372 c:\users\eho 3\desktop\git\railway\railway project\fip cards.h
+
+1584818857 c:\users\eho 3\desktop\git\railway\railway project\interail.h
+	"FIP CARDS.h"
+
+1584893103 c:\users\eho 3\desktop\git\railway\railway project\vagon.h
+	"RESTORAN.h"
+	"AVION.h"
+	"KUPE.h"
+	<string.h>
+
+1584867623 c:\users\eho 3\desktop\git\railway\railway project\restoran.h
+
+1584871114 c:\users\eho 3\desktop\git\railway\railway project\avion.h
+
+1584867689 c:\users\eho 3\desktop\git\railway\railway project\kupe.h
+
