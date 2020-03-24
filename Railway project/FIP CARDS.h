@@ -13,7 +13,7 @@ private:
     int brojkupona;
     int popust;
      datum datumizdavanja;
-     datum datumisteka;
+
 std::string drzava;
 public:
     FipCard(){
@@ -22,9 +22,7 @@ public:
     datumizdavanja.mesec = 1;
     datumizdavanja.godina = 2020;
         drzava = "Srbija";
-      datumisteka.mesec = datumizdavanja.mesec+3;
-      datumisteka.dan = datumizdavanja.dan;
-      datumisteka.godina = 2020;
+
       popust = 100;
     }
     FipCard(int broj, int p, datum izdavanje, std::string d)
@@ -32,23 +30,28 @@ public:
         brojkupona = broj;
         popust= p;
         datumizdavanja = izdavanje;
-        datumisteka.dan = datumizdavanja.dan;
-        datumisteka.mesec = datumizdavanja.mesec+3;
-        datumisteka.godina = datumizdavanja.godina;
-        drzava = d;
+             drzava = d;
     }
     FipCard(const FipCard &fip)
     {
   brojkupona = fip.brojkupona;
   popust = fip.popust;
   datumizdavanja = fip.datumizdavanja;
-  datumisteka = fip.datumisteka;
   drzava = fip.drzava;
     }
+    int GetBrojKupona() const {return brojkupona;}
+    int GetPopust() const {return popust;}
+    datum GetDatumIzdavanja() const {return datumizdavanja;}
+    string GetDrzava() const {return drzava;}
+    void SetBrojKupona(int b){brojkupona = b;}
+    void SetPopust(int p){popust = p;}
+    void SetDatumIzdavanja(datum d){datumizdavanja = d;}
+    void SetDrzava(string d){drzava = d;}
     void iskoristikupon()
     {
         --brojkupona;
     }
+
 };
 
 

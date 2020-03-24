@@ -25,6 +25,12 @@ public:
         sank = r.sank;
         konobar = r.konobar;
     }
+    MENI GetMeni() const {return meni;}
+    bool GetSank() const {return sank;}
+    bool GetKonbar() const {return konobar;}
+    void SetMeni(MENI m)  {meni = m;}
+    void SetSank(bool s) {sank =s;}
+    void SetKonobar(bool k){konobar = k;}
 };
 
 #endif // RESTORAN_H_INCLUDED

@@ -26,7 +26,11 @@ public:
         sto = a.sto;
     }
     SEDISTE GetSediste() const{return sediste;}
-
+    int GetBrojSedista() const{return brojsedista;}
+    bool GetSto()const{return sto;}
+    void SetSediste(SEDISTE s){sediste = s;}
+    void SetBrojSedista(int broj) {brojsedista = broj;}
+    void SetSto(bool s){sto = s;}
 };
 
 #endif // AVION_H_INCLUDED

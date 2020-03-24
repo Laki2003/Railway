@@ -1,17 +1,12 @@
 #include <iostream>
 using namespace std;
-#include "FIP CARDS.h"
-#include "INTERAIL.h"
-#include "VAGON.h"
-
+#include "REZERVACIJA.h"
 
 int main()
 {
+Rezervacija<Kartica> k;
 
-
-
-Vagon<Restoran> e(5,7,ITALIJANSKI, true, false);
-
+printf("%i",k.GetPlacanje().GetNacinplacanja().GetSigurnosniKod());
 
     return 0;
 

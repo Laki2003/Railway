@@ -35,8 +35,12 @@
 		<Unit filename="AVION.h" />
 		<Unit filename="FIP CARDS.h" />
 		<Unit filename="INTERAIL.h" />
+		<Unit filename="KARTICE.h" />
 		<Unit filename="KUPE.h" />
+		<Unit filename="LOKOMOTIVA.h" />
+		<Unit filename="PERON.h" />
 		<Unit filename="RESTORAN.h" />
+		<Unit filename="STANICA.h" />
 		<Unit filename="TICKET.h" />
 		<Unit filename="VAGON.h" />
 		<Unit filename="main.cpp" />

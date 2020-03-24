@@ -31,6 +31,14 @@ int brojkupea;
             klima = ku.klima;
             brojkupea = ku.brojkupea;
         }
+        KUPE GetVrsta() const {return vrsta;}
+        int GetBrojSedistauKupeu() const {return brojSedistauKupeu;}
+bool GetKlima() const{return klima;}
+int GetBrojKupea() const {return brojkupea;}
+void SetVrsta(KUPE v){vrsta = v;}
+void SetBrojSedistauKuepu(int b) {brojSedistauKupeu = b;}
+void SetKlima(bool k){klima = k;}
+void SetBrojKupe(int b){brojkupea = b;}
 };
 
 #endif // KUPE_H_INCLUDED

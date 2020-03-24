@@ -2,10 +2,11 @@
 #define INTERAIL_H_INCLUDED
 #include "FIP CARDS.h"
 typedef Datum datum;
+
 class Interail
 {
 private:
-    std::string* drzave;
+    char** drzave;
     int brojdrzava;
     datum DatumIzdavanja;
     bool celaEvropa;
@@ -27,7 +28,7 @@ public:
             celaEvropa = 0;
             printf("Unesite broj zemalja za interail:");
              scanf("%i", &brojdrzava);
-               drzave = (std::string*)malloc(sizeof(std::string)*brojdrzava);
+               (*drzave) = (char*)malloc(sizeof(char*)*brojdrzava);
 
              for(int i=0;i<brojdrzava;++i)
              {
@@ -48,7 +49,7 @@ celaEvropa = rail.celaEvropa;
         else{
             celaEvropa = false;
             brojdrzava = rail.brojdrzava;
-            drzave=(std::string*)malloc(sizeof(std::string)*brojdrzava);
+            drzave=(char**)malloc(sizeof(char*)*brojdrzava);
             for(int i=0;i<brojdrzava;++i)
             {
                 drzave[i]= rail.drzave[i];
@@ -58,7 +59,16 @@ celaEvropa = rail.celaEvropa;
                drzave[i]=rail.drzave[i];
             }
         }
+        DatumIzdavanja = rail.DatumIzdavanja;
     }
+datum GetDatumIzdavanja() const {return DatumIzdavanja;}
+int GetBrojDrzava () const {return brojdrzava;}
+bool GetCelaEvropa() const {return celaEvropa;}
+char** GetDrzave() const {return drzave;}
+ void SetDrzave(char** s){drzave = s;}
+ void SetBrojDrzava(int b) {brojdrzava = b;}
+ void SetDatumIzdavanja(datum d){DatumIzdavanja = d;}
+ void SetCelaEvropa(bool b){celaEvropa = b;}
 };
 
 #endif // INTERAIL_H_INCLUDED

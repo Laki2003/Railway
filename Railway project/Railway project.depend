@@ -5,26 +5,34 @@
 
 1584815165 c:\projekti\c projects\railway project\fip cards.h
 
-1584891965 source:c:\users\eho 3\desktop\git\railway\railway project\main.cpp
+1585057544 source:c:\users\eho 3\desktop\git\railway\railway project\main.cpp
 	<iostream>
-	"FIP CARDS.h"
-	"INTERAIL.h"
-	"VAGON.h"
+	"REZERVACIJA.h"
 
-1584863372 c:\users\eho 3\desktop\git\railway\railway project\fip cards.h
+1584949026 c:\users\eho 3\desktop\git\railway\railway project\fip cards.h
 
-1584818857 c:\users\eho 3\desktop\git\railway\railway project\interail.h
+1584950832 c:\users\eho 3\desktop\git\railway\railway project\interail.h
 	"FIP CARDS.h"
 
-1584893103 c:\users\eho 3\desktop\git\railway\railway project\vagon.h
+1584949026 c:\users\eho 3\desktop\git\railway\railway project\vagon.h
 	"RESTORAN.h"
 	"AVION.h"
 	"KUPE.h"
 	<string.h>
+	<typeinfo>
 
-1584867623 c:\users\eho 3\desktop\git\railway\railway project\restoran.h
+1584947499 c:\users\eho 3\desktop\git\railway\railway project\restoran.h
 
-1584871114 c:\users\eho 3\desktop\git\railway\railway project\avion.h
+1584947545 c:\users\eho 3\desktop\git\railway\railway project\avion.h
 
-1584867689 c:\users\eho 3\desktop\git\railway\railway project\kupe.h
+1584947499 c:\users\eho 3\desktop\git\railway\railway project\kupe.h
+
+1585057474 c:\users\eho 3\desktop\git\railway\railway project\rezervacija.h
+	"PLACANJE.h"
+
+1585055150 c:\users\eho 3\desktop\git\railway\railway project\placanje.h
+	"KARTICE.h"
+
+1585057582 c:\users\eho 3\desktop\git\railway\railway project\kartice.h
+	"FIP CARDS.h"
 
