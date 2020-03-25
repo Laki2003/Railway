@@ -1,13 +1,10 @@
 #include <iostream>
 using namespace std;
-#include "REZERVACIJA.h"
-
+#include "Voz.h"
 int main()
 {
-Rezervacija<Kartica> k;
-
-printf("%i",k.GetPlacanje().GetNacinplacanja().GetSigurnosniKod());
-
+Voz<Metro> v;
+v.vagoni[1].GetRazred();
     return 0;
 
 }

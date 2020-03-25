@@ -3,6 +3,8 @@
 #include "RESTORAN.h"
 #include "AVION.h"
 #include "KUPE.h"
+#include "Metro.h"
+#include "Teretni.h"
 #include <string.h>
 #include <typeinfo>
 
@@ -20,6 +22,8 @@ public:
 Vagon(int sifra,int klasa, int broj,SEDISTE s, bool t):vagon(broj, s, t), sifravagona(sifra), razred(klasa){}
 Vagon(int sifra, int klasa, KUPE v,int broj, int brojsedista, bool k):vagon(v, broj, brojsedista, k), sifravagona(sifra), razred(klasa){}
 Vagon(int sifra, int klasa, MENI m, bool s, bool k):vagon(m, s, k), sifravagona(sifra), razred(klasa){}
+Vagon(int sifra, int klasa, int m, VRSTAROBE v, string n):vagon(m,v,n), sifravagona(sifra), razred(klasa){}
+Vagon(int sifra, int klasa, int b, bool GSP, bool prilagodjen):vagon(b, GSP, prilagodjen), sifravagona(sifra), razred(klasa){}
 Vagon(int sifra, int klasa, const T &a):vagon(a),sifravagona(sifra), razred(klasa){}
 Vagon(const Vagon &a)
 {

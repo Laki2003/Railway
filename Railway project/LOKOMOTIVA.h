@@ -1,7 +1,7 @@
 #ifndef LOKOMOTIVA_H_INCLUDED
 #define LOKOMOTIVA_H_INCLUDED
 
-enum TOCKOVI{Co-Co,BB, C, BoBo};
+enum TOCKOVI{CoCo,BB, C, BoBo};
 enum MOTOR{DIZEL, ELEKTRICNI};
 class Lokomotiva{
 private:

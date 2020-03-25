@@ -38,8 +38,11 @@
 		<Unit filename="KARTICE.h" />
 		<Unit filename="KUPE.h" />
 		<Unit filename="LOKOMOTIVA.h" />
+		<Unit filename="OSOBA.h" />
 		<Unit filename="PERON.h" />
+		<Unit filename="PLACANJE.h" />
 		<Unit filename="RESTORAN.h" />
+		<Unit filename="REZERVACIJA.h" />
 		<Unit filename="STANICA.h" />
 		<Unit filename="TICKET.h" />
 		<Unit filename="VAGON.h" />
