@@ -1,10 +1,11 @@
 #include <iostream>
+
 using namespace std;
 #include "Voz.h"
 int main()
 {
 Voz<Metro> v;
-v.vagoni[1].GetRazred();
+printf("%i",v.GetVagoni(2).GetSifraVagona());
     return 0;
 
 }

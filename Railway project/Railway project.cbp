@@ -37,7 +37,9 @@
 		<Unit filename="INTERAIL.h" />
 		<Unit filename="KARTICE.h" />
 		<Unit filename="KUPE.h" />
+		<Unit filename="Kompanija.h" />
 		<Unit filename="LOKOMOTIVA.h" />
+		<Unit filename="Metro.h" />
 		<Unit filename="OSOBA.h" />
 		<Unit filename="PERON.h" />
 		<Unit filename="PLACANJE.h" />
@@ -45,7 +47,10 @@
 		<Unit filename="REZERVACIJA.h" />
 		<Unit filename="STANICA.h" />
 		<Unit filename="TICKET.h" />
+		<Unit filename="TICKETPAYMENT.h" />
+		<Unit filename="Teretni.h" />
 		<Unit filename="VAGON.h" />
+		<Unit filename="Voz.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="ruta.h" />
 		<Extensions>
