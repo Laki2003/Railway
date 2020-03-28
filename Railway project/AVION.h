@@ -29,7 +29,7 @@ public:
     int GetBrojSedista() const{return brojsedista;}
     bool GetSto()const{return sto;}
     void SetSediste(SEDISTE s){sediste = s;}
-    void SetBrojSedista(int broj) {brojsedista = broj;}
+    void SetbrojSedista(int broj) {brojsedista = broj;}
     void SetSto(bool s){sto = s;}
 };
 

@@ -3,7 +3,7 @@
 
 enum TOCKOVI{CoCo,BB, C, BoBo};
 enum MOTOR{DIZEL, ELEKTRICNI};
-class Lokomotiva{
+class Lokomotiva {
 private:
 int brzina;
 

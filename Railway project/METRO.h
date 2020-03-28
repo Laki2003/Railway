@@ -2,7 +2,7 @@
 #define METRO_H_INCLUDED
 
 class Metro{
-private:
+
 int brojsedista;
 bool GPSMap;
 bool prilagodjenPosebnePotrebe;
@@ -25,11 +25,11 @@ Metro(const Metro &m)
     GPSMap = m.GPSMap;
     prilagodjenPosebnePotrebe = m.prilagodjenPosebnePotrebe;
 }
-int GetBrojSedista() const{return brojsedista;}
+int GetNumberofSeats() const{return brojsedista;}
 bool GetGPSMap() const {return GPSMap;}
 bool GetprilagodjenPosebnePotrebe() const {return prilagodjenPosebnePotrebe;}
-void SetBrojSedista(int b) {brojsedista=b;}
-void SetGSPMap(bool G) {GPSMap = G;}
+void SetNumberofSeats(int b) {brojsedista=b;}
+void SetGPSMap(bool G) {GPSMap = G;}
 void SetprilagodjenPosebnePotrebe(bool p){prilagodjenPosebnePotrebe = p;}
 };
 

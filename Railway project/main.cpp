@@ -1,11 +1,12 @@
 #include <iostream>
 
 using namespace std;
-#include "Voz.h"
+#include "VAGON.h"
 int main()
 {
-Voz<Metro> v;
-printf("%i",v.GetVagoni(2).GetSifraVagona());
+Vagon m(4, 4, 0, 1);
+m.GetSto();
+
     return 0;
 
 }

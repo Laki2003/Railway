@@ -39,6 +39,7 @@
 		<Unit filename="KUPE.h" />
 		<Unit filename="Kompanija.h" />
 		<Unit filename="LOKOMOTIVA.h" />
+		<Unit filename="ListaVagona.h" />
 		<Unit filename="Metro.h" />
 		<Unit filename="OSOBA.h" />
 		<Unit filename="PERON.h" />

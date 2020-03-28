@@ -3,9 +3,11 @@
 
 enum VRSTAROBE{RID, OSTALO};
 class Teretni{
+    private:
 int masarobekg;
 VRSTAROBE vrstarobe;
 std::string nazivrobe;
+public:
 Teretni()
 {
     masarobekg = 8000;

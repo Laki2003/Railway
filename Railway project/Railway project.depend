@@ -5,16 +5,16 @@
 
 1584815165 c:\projekti\c projects\railway project\fip cards.h
 
-1585216350 source:c:\users\eho 3\desktop\git\railway\railway project\main.cpp
+1585396684 source:c:\users\eho 3\desktop\git\railway\railway project\main.cpp
 	<iostream>
-	"Voz.h"
+	"VAGON.h"
 
 1584949026 c:\users\eho 3\desktop\git\railway\railway project\fip cards.h
 
 1584950832 c:\users\eho 3\desktop\git\railway\railway project\interail.h
 	"FIP CARDS.h"
 
-1585157810 c:\users\eho 3\desktop\git\railway\railway project\vagon.h
+1585396670 c:\users\eho 3\desktop\git\railway\railway project\vagon.h
 	"RESTORAN.h"
 	"AVION.h"
 	"KUPE.h"
@@ -25,7 +25,7 @@
 
 1584947499 c:\users\eho 3\desktop\git\railway\railway project\restoran.h
 
-1584947545 c:\users\eho 3\desktop\git\railway\railway project\avion.h
+1585316350 c:\users\eho 3\desktop\git\railway\railway project\avion.h
 
 1584947499 c:\users\eho 3\desktop\git\railway\railway project\kupe.h
 
@@ -38,20 +38,22 @@
 1585057582 c:\users\eho 3\desktop\git\railway\railway project\kartice.h
 	"FIP CARDS.h"
 
-1585153640 c:\users\eho 3\desktop\git\railway\railway project\metro.h
+1585396670 c:\users\eho 3\desktop\git\railway\railway project\metro.h
 
-1585237929 c:\users\eho 3\desktop\git\railway\railway project\voz.h
+1585379251 c:\users\eho 3\desktop\git\railway\railway project\voz.h
 	"Kompanija.h"
 	"LOKOMOTIVA.h"
-	"VAGON.h"
+	"ListaVagona.h"
 	<vector>
-	<any>
 
 1585157995 c:\users\eho 3\desktop\git\railway\railway project\kompanija.h
 
-1585157780 c:\users\eho 3\desktop\git\railway\railway project\lokomotiva.h
+1585300398 c:\users\eho 3\desktop\git\railway\railway project\lokomotiva.h
 
-1585153559 c:\users\eho 3\desktop\git\railway\railway project\teretni.h
+1585396670 c:\users\eho 3\desktop\git\railway\railway project\teretni.h
 
 1585228527 c:\users\eho 3\desktop\git\railway\railway project\boost.h
+
+1585379251 c:\users\eho 3\desktop\git\railway\railway project\listavagona.h
+	"VAGON.h"
 
