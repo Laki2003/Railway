@@ -5,7 +5,7 @@ enum KARTICA{MASTERCARD, VISA, PAYPAL};
 class Kartica{
     private:
 KARTICA tip;
-string brojkartice;
+char* brojkartice;
 datum datumisteka;
 int sigurnosnikod;
     public:
@@ -17,13 +17,15 @@ int sigurnosnikod;
             datumisteka.mesec = 1;
             datumisteka.godina = 2021;
             sigurnosnikod = 152;
+
         }
-        Kartica(KARTICA t, string b, datum d, int s)
+        Kartica(KARTICA t, char* b, datum d, int s)
         {
             tip = t;
             brojkartice = b;
 datumisteka = d;
 sigurnosnikod = s;
+
         }
         Kartica(const Kartica &k)
         {
@@ -34,11 +36,11 @@ sigurnosnikod = s;
         }
         KARTICA GetTip() const {return tip;}
         datum GetDatumIsteka() const {return datumisteka;}
-        string GetBrojKartice() const {return brojkartice;}
+        char* GetBrojKartice() const {return brojkartice;}
         int GetSigurnosniKod() const {return sigurnosnikod;}
         void SetTip(KARTICA t) {tip = t;}
         void SetDatumIsteka(datum d){datumisteka = d;}
-        void SetBrojKartice(string b){brojkartice = b;}
+        void SetBrojKartice(char* b){brojkartice = b;}
         void SetSigurnosniKod(int s){sigurnosnikod = s;}
 };
 

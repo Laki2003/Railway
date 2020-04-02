@@ -31,6 +31,7 @@ int brojkupea;
             klima = ku.klima;
             brojkupea = ku.brojkupea;
         }
+        ~Kupe(){};
         KUPE GetVrsta() const {return vrsta;}
         int GetBrojSedistauKupeu() const {return brojSedistauKupeu;}
 bool GetKlima() const{return klima;}

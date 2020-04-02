@@ -13,7 +13,7 @@ VALUTA valuta;
 public:
     Placanje(): nacinplacanja(), valuta(EUR){}
     Placanje(Kes k, VALUTA v): nacinplacanja(k), valuta(v){}
-    Placanje(KARTICA t, string b, datum d, int s, VALUTA v): nacinplacanja(t, b, d, s), valuta(v){}
+    Placanje(KARTICA t, char* b, datum d, int s, VALUTA v): nacinplacanja(t, b, d, s), valuta(v){}
     Placanje(const T &t, VALUTA v): nacinplacanja(t), valuta(v){}
     Placanje(Placanje &p): nacinplacanja(p.nacinplacanja), valuta(p.valuta){}
     T GetNacinplacanja() const { return nacinplacanja;}

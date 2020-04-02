@@ -25,6 +25,7 @@ Metro(const Metro &m)
     GPSMap = m.GPSMap;
     prilagodjenPosebnePotrebe = m.prilagodjenPosebnePotrebe;
 }
+~Metro(){};
 int GetNumberofSeats() const{return brojsedista;}
 bool GetGPSMap() const {return GPSMap;}
 bool GetprilagodjenPosebnePotrebe() const {return prilagodjenPosebnePotrebe;}

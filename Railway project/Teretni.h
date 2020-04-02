@@ -26,6 +26,7 @@ Teretni(const Teretni &t)
     vrstarobe = t.vrstarobe;
     nazivrobe = t.nazivrobe;
 }
+~Teretni(){};
 int GetMasaRobekg() const {return masarobekg;}
 VRSTAROBE GetVrstaRobe() const {return vrstarobe;}
 std::string GetNazivRobe() const {return nazivrobe;}

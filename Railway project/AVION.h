@@ -25,6 +25,7 @@ public:
         sediste = a.sediste;
         sto = a.sto;
     }
+    ~Avion(){};
     SEDISTE GetSediste() const{return sediste;}
     int GetBrojSedista() const{return brojsedista;}
     bool GetSto()const{return sto;}

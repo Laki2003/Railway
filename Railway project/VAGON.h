@@ -17,7 +17,9 @@ int razred;
 
 public:
 
-    Vagon():Metro(),  sifravagona(0), razred(0){}
+    Vagon():Metro(),  sifravagona(0), razred(0){
+
+    }
 Vagon(int sifra,int klasa, int broj,SEDISTE s, bool t):Avion(broj, s, t), sifravagona(sifra), razred(klasa){}
 Vagon(int sifra, int klasa, KUPE v,int broj, int brojsedista, bool k):Kupe(v, broj, brojsedista, k), sifravagona(sifra), razred(klasa){}
 Vagon(int sifra, int klasa, MENI m, bool s, bool k):Restoran(m, s, k), sifravagona(sifra), razred(klasa){}
