@@ -23,7 +23,7 @@ public:
 Vagon(int sifra,int klasa, int broj,SEDISTE s, bool t):Avion(broj, s, t), sifravagona(sifra), razred(klasa){}
 Vagon(int sifra, int klasa, KUPE v,int broj, int brojsedista, bool k):Kupe(v, broj, brojsedista, k), sifravagona(sifra), razred(klasa){}
 Vagon(int sifra, int klasa, MENI m, bool s, bool k):Restoran(m, s, k), sifravagona(sifra), razred(klasa){}
-Vagon(int sifra, int m, VRSTAROBE v, string n):Teretni(m,v,n), sifravagona(sifra), razred(0){}
+Vagon(int sifra, int m, VRSTAROBE v, char* n):Teretni(m,v,n), sifravagona(sifra), razred(0){}
 Vagon(int sifra, int b, bool GSP, bool prilagodjen):Metro(b, GSP, prilagodjen), sifravagona(sifra), razred(0){}
 
 /*Vagon(int sifra, const Metro & m): sifravagona(sifra), razred(0), Metro(m){}

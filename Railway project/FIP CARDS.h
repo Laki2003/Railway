@@ -14,7 +14,7 @@ private:
     int popust;
      datum datumizdavanja;
 
-std::string drzava;
+char* drzava;
 public:
     FipCard(){
     brojkupona=4;
@@ -25,7 +25,7 @@ public:
 
       popust = 100;
     }
-    FipCard(int broj, int p, datum izdavanje, std::string d)
+    FipCard(int broj, int p, datum izdavanje, char* d)
     {
         brojkupona = broj;
         popust= p;
@@ -42,11 +42,11 @@ public:
     int GetBrojKupona() const {return brojkupona;}
     int GetPopust() const {return popust;}
     datum GetDatumIzdavanja() const {return datumizdavanja;}
-    string GetDrzava() const {return drzava;}
+    char* GetDrzava() const {return drzava;}
     void SetBrojKupona(int b){brojkupona = b;}
     void SetPopust(int p){popust = p;}
     void SetDatumIzdavanja(datum d){datumizdavanja = d;}
-    void SetDrzava(string d){drzava = d;}
+    void SetDrzava(char* d){drzava = d;}
     void iskoristikupon()
     {
         --brojkupona;

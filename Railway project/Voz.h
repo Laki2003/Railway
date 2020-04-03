@@ -10,24 +10,16 @@ enum VRSTAVOZA{PUTNICKI, TERETNI, METRO};
 class Voz
 {
 private:
-    std::string sifravoza;
-    Kompanija k;
-    Lokomotiva l;
+   char* sifravoza;
+    Kompanija* k;
+    Lokomotiva* l;
     int brojvagona;
     VRSTAVOZA voz;
 Lista vagoni;
-public:
-
-    Voz():sifravoza("101"), k(), l(), brojvagona(10),voz(METRO), vagoni(){
-    for(int i=0;i<brojvagona;++i)
+protected:
+    void unosVagona()
     {
-        Vagon* a = new Vagon();
-vagoni.addVagon(a);
-
-    }
-    }
-    Voz(string s, int o, string Z, int p, int b, int g,int q, string m, TOCKOVI t, MOTOR r, int w, VRSTAVOZA type): sifravoza(s), k(o, Z, p), l(b,g,q,m,t,r), brojvagona(w),voz(type), vagoni(){
-    if(voz==PUTNICKI){
+        if(voz==PUTNICKI){
     for(int i=0;i<brojvagona;++i)
     {
      printf("Izaberite vrstu vagona: 1. AVION, 2. KUPE, 3. RESTORAN\n");
@@ -222,12 +214,29 @@ printf("Unesite da li metro ima GPS (1.DA 0.NE)\n");
             prilagodjen = true;
         else
         prilagodjen = false;
+         Vagon* a = new Vagon(i, b, GPS, prilagodjen);
+vagoni.addVagon(a);
         }
     }
+    }
+public:
+
+
+
+    Voz():sifravoza("101"), k(new Kompanija()), l(new Lokomotiva()), brojvagona(10),voz(METRO), vagoni(){
+    for(int i=0;i<brojvagona;++i)
+    {
+        Vagon* a = new Vagon();
+vagoni.addVagon(a);
 
     }
-  //  Voz(std::string s, )
+    }
+    Voz(char* s, int o, char* Z, int p, int b, int g,int q, char* m, TOCKOVI t, MOTOR r, int w, VRSTAVOZA type): sifravoza(s), k(new Kompanija(o, Z, p)), l(new Kompanija(b,g,q,m,t,r)), brojvagona(w),voz(type), vagoni(){
+    unosVagona();
+
+    }
 Lista GetVagoni() const {return vagoni;}
+char* GetSifraVoza() const {return sifravoza;}
 };
 
 #endif // VOZ_H_INCLUDED

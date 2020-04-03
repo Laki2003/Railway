@@ -10,7 +10,7 @@ char* Grad;
 char* Zemlja;
 bool glavnastanica;
 int brojperona;
-std::vector<Peron> p;
+std::vector<Peron*> p;
 char NazivStanice[30];
 
 public:
@@ -23,7 +23,7 @@ Stanica()
     brojperona = 5;
     for(int i=0;i<brojperona;++i)
     {
-        Peron a;
+        Peron* a = new Peron();
         p.push_back(a);
     }
     printf("Unesite naziv stanice: ");
@@ -50,12 +50,12 @@ Stanica(char* g, char* z, bool glavna, int broj, char* n)
         }
         if(s==1)
      {
-         Peron a(true, i+1);
+         Peron* a = new Peron(true, i+1);
      p.push_back(a);
      }
         else
          {
-            Peron a(false, i+1);
+            Peron* a= new Peron(false, i+1);
         p.push_back(a);
     }
     }
@@ -73,7 +73,7 @@ Stanica(const Stanica& s)
     brojperona = s.brojperona;
     for(int i=0;i<brojperona;++i)
     {
-        p.push_back(s.p[i]);
+        p.push_back(new Peron(*(s.p[i])));
     }
 
 }
@@ -81,15 +81,27 @@ char* getGrad() const {return Grad;}
 char* GetZemlja() const {return Zemlja;}
 bool GetGlavnaStanica() const {return glavnastanica;}
 int GetBrojPerona() const {return brojperona;}
-Peron GetPeron(int brojperona) const {return p[brojperona-1];}
+Peron* GetPeron(int brojperona) const {return p[brojperona-1];}
 char* GetNazivStanice()  {return NazivStanice;}
 void SetGrad(char* s){Grad = s;}
 void SetZemlja(char* z){Zemlja = z;}
 void SetGlavnaStanica(bool s){glavnastanica = s;}
-void SetBrojPerona(int broj){for(int i=brojperona-1;i>=broj;++i)
+void SetBrojPerona(int broj){
+    if(broj<=brojperona){
+    for(int i=brojperona-1;i>=broj;++i)
 {
+    delete p[i];
     p.pop_back();
 }
+    }
+    else
+    {
+        for(int i=0;i<broj-brojperona;++i)
+        {
+            Peron* a = new Peron();
+            p.push_back(a);
+        }
+    }
 brojperona = broj;
 }
 void SetNazivStanice(){

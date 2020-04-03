@@ -6,7 +6,7 @@ class Teretni{
     private:
 int masarobekg;
 VRSTAROBE vrstarobe;
-std::string nazivrobe;
+char* nazivrobe;
 public:
 Teretni()
 {
@@ -14,7 +14,7 @@ Teretni()
     vrstarobe = OSTALO;
     nazivrobe = "Prehrambreni proizvodi";
 }
-Teretni(int m, VRSTAROBE v, string n)
+Teretni(int m, VRSTAROBE v, char* n)
 {
     masarobekg = m;
     vrstarobe = v;
@@ -29,10 +29,10 @@ Teretni(const Teretni &t)
 ~Teretni(){};
 int GetMasaRobekg() const {return masarobekg;}
 VRSTAROBE GetVrstaRobe() const {return vrstarobe;}
-std::string GetNazivRobe() const {return nazivrobe;}
+char* GetNazivRobe() const {return nazivrobe;}
 void SetMasaRobe(int m) {masarobekg = m;}
 void SetVrstaRobe(VRSTAROBE v) {vrstarobe = v;}
-void SetNazivRobe(std::string n){nazivrobe = n;}
+void SetNazivRobe(char* n){nazivrobe = n;}
 };
 
 #endif // TERETNI_H_INCLUDED

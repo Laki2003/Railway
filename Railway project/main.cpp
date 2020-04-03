@@ -2,14 +2,12 @@
 
 using namespace std;
 #include "ruta.h"
+#include "REZERVACIJA.h"
 int main()
 {
-Ruta r;
-Ruta f(r);
-f.getFrom()->SetNazivStanice();
-f.getTo()->SetNazivStanice();
-printf("%s",f.getFrom()->GetNazivStanice());
-printf("%s", r.getFrom()->GetNazivStanice());
+Rezervacija<Kartica> r;
+
+
     return 0;
 
 }

@@ -9,7 +9,7 @@ int brzina;
 
         int godiste;
     int snaga;
-     string model;
+    char* model;
     TOCKOVI tockovi;
     MOTOR motor;
 public:
@@ -22,7 +22,7 @@ public:
         tockovi = CoCo;
         motor = ELEKTRICNI;
     }
-    Lokomotiva(int b, int g,int s, string m, TOCKOVI t, MOTOR r){
+    Lokomotiva(int b, int g,int s, char* m, TOCKOVI t, MOTOR r){
     godiste = g;
     brzina = b;
     snaga = s;
@@ -42,13 +42,13 @@ public:
     int GetBrzina() const {return brzina;}
     int GetGodiste() const{return godiste;}
     int GetSnaga() const {return snaga;}
-    string GetModel() const {return model;}
+    char* GetModel() const {return model;}
     TOCKOVI GetTockovi() const {return tockovi;}
     MOTOR GetMotor() const {return motor;}
     void SetBrzina(int b)  {brzina = b;}
     void SetGodiste(int g){godiste = g;}
     void SetSnaga(int s){snaga = s;}
-    void SetModel(string m) {model = m;}
+    void SetModel(char* m) {model = m;}
     void SetTockovi(TOCKOVI t){tockovi = t;}
     void SetMotor(MOTOR m){motor = m;}
 };

@@ -5,7 +5,7 @@ class Kompanija
 {
 private:
     int osnovana;
-    string ZemljaPorekla;
+    char* ZemljaPorekla;
     int prihod;
     public:
     Kompanija()
@@ -14,7 +14,7 @@ private:
         ZemljaPorekla = "Japan";
         prihod= 500000000;
     }
-    Kompanija(int o, string Z, int p)
+    Kompanija(int o, char* Z, int p)
     {
         osnovana = o;
         ZemljaPorekla = Z;
@@ -27,10 +27,10 @@ private:
         prihod = k.prihod;
     }
     int GetOsnovana() const {return osnovana;}
-    string GetZemljaPorekla() const {return ZemljaPorekla;}
+    char* GetZemljaPorekla() const {return ZemljaPorekla;}
     int GetPrihod() const {return prihod;}
     void SetOsnovana(int o){osnovana = o;}
-    void SetZemljaPorekla(std::string Z){ZemljaPorekla = Z;}
+    void SetZemljaPorekla(char* Z){ZemljaPorekla = Z;}
     void SetPrihod(int p){prihod = p;}
 };
 

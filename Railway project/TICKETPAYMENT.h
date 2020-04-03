@@ -9,23 +9,26 @@ private:
     int brojkarata;
     int ukupnacena;
     Osoba osoba;
-    T karta;
-    Placanje<U> p;
+    T* karta;
+    Placanje<U>* p;
 public:
-    TicketPayment(): cena(10), brojkarata(1), ukupnacena(10), osoba(), karta(), p() {}
-    TicketPayment(int c, int b, int u, Osoba o, int broj, int p, datum izdavanje, std::string d,Kes k, VALUTA v):
-        cena(c), brojkarata(b), ukupnacena(u), osoba(o), karta(broj,p,izdavanje,d), p(k, v) {}
-    TicketPayment(int c, int b, int u, Osoba o, int broj, int p, datum izdavanje, std::string d, KARTICA t, string h, datum d, int s, VALUTA v):
-        cena(c), brojkarata(b), ukupnacena(u), osoba(o), karta(broj,p,izdavanje,d), p(t, h, d, s, v) {}
-    TicketPayment(int c, int b, int u, Osoba o, int broj, int p, datum izdavanje, std::string d,const U &t, VALUTA v):
-        cena(c), brojkarata(b), ukupnacena(u), osoba(o), karta(broj,p,izdavanje,d), p(t, v) {}
-    TicketPayment(int c, int b, int u, Osoba o, datum d, bool evropa, Kes k, VALUTA v):
-        cena(c), brojkarata(b), ukupnacena(u), osoba(o), karta(d, evropa), p(k, v) {}
-    TicketPayment(int c, int b, int u, Osoba o, datum d, bool evropa,KARTICA t, string m, datum n, int s, VALUTA v):
-        cena(c), brojkarata(b), ukupnacena(u), osoba(o), karta(d, evropa), p(t,m,n,s,v) {}
-    TicketPayment(int c, int b, int u, Osoba o, datum d, bool evropa, const U &t, VALUTA v):
-     cena(c), brojkarata(b), ukupnacena(u), osoba(o), karta(d, evropa), p(t, v){}
-
+    TicketPayment(): cena(10), brojkarata(1), ukupnacena(10), osoba(new Osoba()), karta(new T()), p(new Placanje<U>()) {}
+    TicketPayment(int c, int b, int u, const Osoba &o, int broj, int p, datum izdavanje, char* d,Kes k, VALUTA v):
+        cena(c), brojkarata(b), ukupnacena(u), osoba(o), karta(new T(broj,p,izdavanje,d)), p(new Placanje<U>(k, v)) {}
+    TicketPayment(int c, int b, int u, const Osoba& o, int broj, int p, datum izdavanje, char* d, KARTICA t, char* h, datum d, int s, VALUTA v):
+        cena(c), brojkarata(b), ukupnacena(u), osoba(o), karta(new T(broj,p,izdavanje,d)), p(new Placanje<U>(t, h, d, s, v)) {}
+    TicketPayment(int c, int b, int u, const Osoba& o, int broj, int p, datum izdavanje, char* d,const U &t, VALUTA v):
+        cena(c), brojkarata(b), ukupnacena(u), osoba(o), karta(new T(broj,p,izdavanje,d)), p(new Placanje<U>(t, v)) {}
+    TicketPayment(int c, int b, int u, const Osoba& o, datum d, bool evropa, Kes k, VALUTA v):
+        cena(c), brojkarata(b), ukupnacena(u), osoba(o), karta(new T(d, evropa)), p(new Placanje<U>(k, v)) {}
+    TicketPayment(int c, int b, int u, const Osoba& o, datum d, bool evropa,KARTICA t, char* m, datum n, int s, VALUTA v):
+        cena(c), brojkarata(b), ukupnacena(u), osoba(o), karta(new T(d, evropa)), p(new Placanje<U>(t,m,n,s,v)) {}
+    TicketPayment(int c, int b, int u, const Osoba& o, datum d, bool evropa, const U &t, VALUTA v):
+     cena(c), brojkarata(b), ukupnacena(u), osoba(o), karta(new T(d, evropa)), p(new Placanje<U>(t, v)){}
+TicketPayment(int c, int b, int u, const Osoba& o, TipKarte t, datum k, const Ruta& ru, const Voz& v, Kes k, VALUTA v):
+cena(c), brojkarata(b), ukupnacena(u), osoba(o),karta(new T(t,k,ru,v)), p(new Placanje<U>(k,v)){}
+TicketPayment(int c, int b, int u, const Osoba& o,  TipKarte t, datum k, const Ruta& ru, const Voz& v, KARTICA te, char* dd, datum d, int s, VALUTA va):
+    cena(c), brojkarata(b), ukupnacena(u), osoba(o), karta(new T(t,k,ru,v)),  p(new Placanje<U>(te, dd, d, s, va)){}
 
 };
 
