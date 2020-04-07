@@ -1,32 +1,21 @@
 #ifndef REZERVACIJA_H_INCLUDED
 #define REZERVACIJA_H_INCLUDED
-#include "PLACANJE.h"
-template<class T>
+#include "ruta.h"
+
 class Rezervacija{
 private:
-int brojmesta;
 int cena;
-int ukupnacena;
-Placanje <T>* p;
+Ruta* r;
 public:
-    Rezervacija():brojmesta(1), cena(10), ukupnacena(10),p(new Placanje<T>()) {}
-    Rezervacija(int broj, int c, Kes k, VALUTA v):brojmesta(broj), cena(c), ukupnacena(broj*c), p(new Placanje<T>(k, v)){}
-    Rezervacija(int broj, int c, KARTICA t, char* b, datum d, int s, VALUTA v):brojmesta(broj), cena(c), ukupnacena(c*broj), p(new Placanje<T>(t,b,d,s,v)){}
-    Rezervacija(int broj, int c, const T &t, VALUTA v):brojmesta(broj), cena(c), ukupnacena(broj*c), p(new Placanje<T>(t, v)){}
-    Rezervacija(int broj, int c, Placanje<T> &pay):brojmesta(broj), cena(c), ukupnacena(broj*c), p(new Placanje<T>(pay)){}
-    Rezervacija(Rezervacija &r): brojmesta(r.brojmesta), cena(r.cena), ukupnacena(r.brojmesta*r.cena), p(new Placanje<T>(*(r.p))){}
+    Rezervacija():cena(10), r(new Ruta()){}
+    Rezervacija(int c, char* g1, char* z1, bool glavna1, int broj1, char* n1, char* g2, char* z2, bool glavna2, int broj2, char* n2, RUTA r, Vreme time, int u):
+        cena(c), r(new Ruta(g1,z1,glavna1,broj1,n1,g2,z2,glavna2,broj2,n2,r,time,u)){}
+Rezervacija(int c,const Rezervacija&r):cena(c), r(new Ruta(*r.r)){}
 
-Placanje<T>* GetPlacanje()  {return p;}
-int GetBrojMesta() const {return brojmesta;}
-int GetCena() const {return cena;}
-int GetUkupnaCena() const {return ukupnacena;}
-void SetPlacanje(Placanje<T>* pay){p = pay;}
-void SetBrojMesta(int broj){brojmesta = broj;}
-void SetCena(int c){cena = c;}
-void SetUkupnaCena(int d, int e){SetBrojMesta(d);
-SetCena(e);
-ukupnacena = brojmesta*cena;
-}
+int GetCena()const{return cena;}
+Ruta* GetRuta() const {return r;}
+void SetCena(int c){cena=c;}
+
  };
 
 #endif // REZERVACIJA_H_INCLUDED

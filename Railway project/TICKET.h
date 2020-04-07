@@ -6,32 +6,49 @@ enum TipKarte {RETURN, ONEWAY};
 
 class Ticket
 {
-private:
+protected:
     TipKarte tip;
     datum kretanja;
     datum povratka;
-    Ruta r;
+    Ruta* r;
     char* sifravoza;
+    int cena;
 public:
-    Ticket(): tip(ONEWAY), kretanja(
-    {
-        1, 1, 2020
-    }), povratka({0,0,0}), r(new Ruta()), sifravoza(101) {}
-    Ticket(TipKarte t, datum k, const Ruta& ru, const Voz& v): tip(t),kretanje(k), r(ru), sifravoza(v.GetSifraVoza())
-    {
-        if(t==RETURN)
-        {
-            datum d;
-            printf("Unesite dan povratka!");
-            scanf("%d", &d.dan);
-            printf("Unesite mesec povratka!");
-            scanf("%d", &d.mesec);
-            povratka.dan = d.dan;
-            povratka.mesec = d.mesec;
-            povratka.godina = k.godina;
-        }
-    }
-    Ticket(const Ticket& t): tip(t.tip), tip(t.kretanja), tip(t.povratka), tip(t.r), tip(t.sifravoza) {}
+Ticket(): r(new Ruta()){
+tip = ONEWAY;
+kretanja.dan = 1;
+kretanja.mesec = 1;
+kretanja.godina = 2020;
+if(tip==RETURN)
+{
+    povratka.dan = 2;
+    povratka.mesec = 1;
+    povratka.godina = 2020;
+}
+else{
+    povratka.dan = 0;
+    povratka.mesec = 0;
+    povratka.godina = 0;
+}
+sifravoza = "100";
+cena = 50;
+}
+Ticket(char* g1, char* z1, bool glavna1, int broj1, char* n1, char* g2,
+       char* z2, bool glavna2, int broj2, char* n2, RUTA r, Vreme time, int u, datum k, datum p, TipKarte t, int c):
+           r(new Ruta(g1,z1,glavna1,broj1,n1,g2,z2,glavna2,broj2,n2, r,time,u)),tip(t),kretanja(k),cena(c)
+       {
+           if(tip==RETURN)
+           {
+               povratka = p;
+
+           }
+           else{
+            povratka.dan=0;
+            povratka.mesec = 0;
+            povratka.godina = 0;
+           }
+       }
+       Ticket(const Ticket& k): r(new Ruta(*(k.r))), tip(k.tip), kretanja(k.kretanja), povratka(k.povratka), sifravoza(k.sifravoza), cena(k.cena){}
     TipKarte GetTipKarte() const
     {
         return tip;
@@ -44,13 +61,16 @@ public:
     {
         return povratka;
     }
-    Ruta GetR() const
+    Ruta* GetR() const
     {
         return r;
     }
     char* GetSifraVoza() const
     {
         return sifravoza;
+    }
+    int GetCena()const{
+    return cena;
     }
     void SetTipKarte(TipKarte t)
     {
@@ -66,11 +86,16 @@ public:
     }
     void SetR(const Ruta& ru)
     {
-        r = ru;
+delete r;
+    r = new Ruta(ru);
     }
     void SetSifraVoza(char* s)
     {
         sifravoza = s;
+    }
+    void SetCena(int c)
+    {
+        cena= c;
     }
 };
 

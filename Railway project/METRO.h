@@ -1,37 +1,37 @@
 #ifndef METRO_H_INCLUDED
 #define METRO_H_INCLUDED
-
-class Metro{
+#include "VAGON.h"
+class Metro: public Vagon{
 
 int brojsedista;
 bool GPSMap;
 bool prilagodjenPosebnePotrebe;
 public:
-Metro()
+Metro():Vagon()
 {
     brojsedista = 20;
     GPSMap = true;
     prilagodjenPosebnePotrebe = false;
 }
-Metro(int b, bool GSP, bool prilagodjen)
+Metro(int b, bool GSP, bool prilagodjen, int sifra, int r):Vagon(sifra, r)
 {
     brojsedista = b;
     GPSMap = GSP;
     prilagodjenPosebnePotrebe = prilagodjen;
 }
-Metro(const Metro &m)
+Metro(const Metro &m): Vagon(m.sifravagona, m.razred)
 {
     brojsedista = m.brojsedista;
     GPSMap = m.GPSMap;
     prilagodjenPosebnePotrebe = m.prilagodjenPosebnePotrebe;
 }
 ~Metro(){};
-int GetNumberofSeats() const{return brojsedista;}
-bool GetGPSMap() const {return GPSMap;}
-bool GetprilagodjenPosebnePotrebe() const {return prilagodjenPosebnePotrebe;}
-void SetNumberofSeats(int b) {brojsedista=b;}
-void SetGPSMap(bool G) {GPSMap = G;}
-void SetprilagodjenPosebnePotrebe(bool p){prilagodjenPosebnePotrebe = p;}
+int GetBrojSedista() const {return brojsedista;}
+bool GetOprema()  const {return GPSMap;}
+bool GetPrilagodjenzaPosebnePotrebe() const {return prilagodjenPosebnePotrebe;}
+void SetBrojsedista(int b) {brojsedista=b;}
+void SetOprema(bool G) {GPSMap = G;}
+void SetPrilagodjenzaPosebnePotrebe(bool p){prilagodjenPosebnePotrebe = p;}
 };
 
 #endif // METRO_H_INCLUDED

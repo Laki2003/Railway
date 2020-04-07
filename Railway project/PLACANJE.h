@@ -14,12 +14,17 @@ public:
     Placanje(): nacinplacanja(new T()), valuta(EUR){}
     Placanje(Kes k, VALUTA v): nacinplacanja(new T(k)), valuta(v){}
     Placanje(KARTICA t, char* b, datum d, int s, VALUTA v): nacinplacanja(new T(t, b, d, s)), valuta(v){}
-    Placanje(const T &t, VALUTA v): nacinplacanja(new T(t)), valuta(v){}
     Placanje(Placanje &p): nacinplacanja(new T(*(p.nacinplacanja))), valuta(p.valuta){}
-    T* GetNacinplacanja() const { return nacinplacanja;}
+    T* GetNacinplacanja() const {
+
+        return nacinplacanja;}
     VALUTA GetValuta() const {return valuta;}
-    void SetNacinPLacanja(const T &n){nacinplacanja = n;}
+    void SetNacinPLacanja(const T* n){
+    delete nacinplacanja;
+    nacinplacanja = new T(*n);
+    }
         void SetValuta(VALUTA v){valuta = v;}
+
 };
 
 #endif // PLACANJE_H_INCLUDED

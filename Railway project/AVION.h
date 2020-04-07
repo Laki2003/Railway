@@ -1,37 +1,55 @@
 #ifndef AVION_H_INCLUDED
 #define AVION_H_INCLUDED
-enum SEDISTE {KOZNO, STOF};
-class Avion{
+#include "VAGON.h"
+enum TIP {KOZNO, STOF};
+class Avion: public Vagon {
 private:
     int brojsedista;
-    SEDISTE sediste;
+    TIP sediste;
     bool sto;
 public:
-    Avion()
+    Avion(): Vagon()
     {
         brojsedista = 0;
         sediste = STOF;
         sto = true;
     }
-    Avion(int broj, SEDISTE s, bool t)
+    Avion(int broj, TIP s, bool t, int sifra, int r):Vagon(sifra, r)
     {
         brojsedista = broj;
         sediste = s;
         sto= t;
     }
-    Avion(const Avion &a)
+    Avion(const Avion &a):Vagon(a.sifravagona, a.razred)
     {
         brojsedista = a.brojsedista;
         sediste = a.sediste;
         sto = a.sto;
     }
     ~Avion(){};
-    SEDISTE GetSediste() const{return sediste;}
-    int GetBrojSedista() const{return brojsedista;}
-    bool GetSto()const{return sto;}
-    void SetSediste(SEDISTE s){sediste = s;}
+    char* GetTip() const{
+    switch(sediste)
+    {
+    case KOZNO:
+        return "Kozno";
+    case STOF:
+        return "Stof";
+    }
+    }
+    int GetBrojSedista() const {return brojsedista;}
+    bool GetOprema()const{return sto;}
+    void SetTip(int s){
+    switch(s){
+case 1:
+    sediste = KOZNO;
+    break;
+    case 2:
+     sediste = STOF;
+     break;
+    }
+        }
     void SetbrojSedista(int broj) {brojsedista = broj;}
-    void SetSto(bool s){sto = s;}
+    void SetOprema(bool s){sto = s;}
 };
 
 #endif // AVION_H_INCLUDED

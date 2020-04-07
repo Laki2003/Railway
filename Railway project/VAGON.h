@@ -1,40 +1,49 @@
 #ifndef VAGON_H_INCLUDED
 #define VAGON_H_INCLUDED
-#include "RESTORAN.h"
-#include "AVION.h"
-#include "KUPE.h"
-#include "Metro.h"
-#include "Teretni.h"
-#include <string.h>
 #include <typeinfo>
 
 
-class Vagon : public Metro, public Avion, public Kupe, public Restoran, public Teretni  {
-private:
+class Vagon {
+protected:
 
 int sifravagona;
 int razred;
 
 public:
 
-    Vagon():Metro(),  sifravagona(0), razred(0){
-
-    }
-Vagon(int sifra,int klasa, int broj,SEDISTE s, bool t):Avion(broj, s, t), sifravagona(sifra), razred(klasa){}
-Vagon(int sifra, int klasa, KUPE v,int broj, int brojsedista, bool k):Kupe(v, broj, brojsedista, k), sifravagona(sifra), razred(klasa){}
-Vagon(int sifra, int klasa, MENI m, bool s, bool k):Restoran(m, s, k), sifravagona(sifra), razred(klasa){}
-Vagon(int sifra, int m, VRSTAROBE v, char* n):Teretni(m,v,n), sifravagona(sifra), razred(0){}
-Vagon(int sifra, int b, bool GSP, bool prilagodjen):Metro(b, GSP, prilagodjen), sifravagona(sifra), razred(0){}
-
-/*Vagon(int sifra, const Metro & m): sifravagona(sifra), razred(0), Metro(m){}
-Vagon(int sifra, int klasa, const Restoran & m): sifravagona(sifra), razred(klasa), Restoran(m){}
-Vagon(int sifra, int klasa, const Kupe & m): sifravagona(sifra), razred(klasa), Kupe(m){}
-Vagon(int sifra,  const Teretni & m): sifravagona(sifra), razred(0), Teretni(m){}
-Vagon(int sifra, int klasa, const Avion & m): sifravagona(sifra), razred(klasa), Avion(m){}*/
-Vagon(const Vagon &a)
+virtual int GetBrojSedista(void) const{printf("Ovaj vagon nema ovu funkciju!");
+return -1;}
+virtual void SetBrojsedista(int){printf("Ovaj vagon nema ovu funkciju");}
+virtual char* GetTip() const{
+printf("Ovaj vagon nema posebne vrste!");
+};
+virtual void SetTip(int){printf("Ovaj vagon nema posebne vrste!");}
+virtual bool GetOprema()const {printf("Ovaj vagon nema posebnu opremu!");}
+virtual void SetOprema(bool){printf("Ovaj vagon nema posebnu opremu!");}
+virtual int GetBrojKupea()const {printf("Ovaj vagon nema kupee!");}
+virtual void SetBrojKupea(int){printf("Ovaj vagon nema kupe-e!");}
+virtual bool GetPrilagodjenzaPosebnePotrebe()const{printf("Ovaj vagon nema tu mogucnost!");}
+virtual void SetPrilagodjenzaPosebnePotrebe(bool){printf("Ovaj vagon nema tu mogucnost!");}
+virtual bool GetKonobar()const{printf("Ovaj vagon nema konobara!");}
+virtual void SetKonobar(bool){printf("Ovaj vagon nema konobara!");}
+virtual int GetMasaRobe()const{printf("Ovaj vagon nema robu!");}
+virtual void SetMasaRobe(int){printf("Ovaj vagon nema robu!");}
+virtual char* GetNazivRobe()const{printf("Ovaj vagon nema robu!");}
+virtual void SetNazivRobe(char*){printf("Ovaj vagon nema robu!");}
+Vagon()
 {
-    sifravagona = a.sifravagona;
-    sifravagona = a.razred;
+    sifravagona = 100;
+    razred = 1;
+}
+Vagon(int s, int r)
+{
+    sifravagona = s;
+    razred = r;
+}
+Vagon(const Vagon &v)
+{
+    sifravagona = v.sifravagona;
+    razred = v.razred;
 }
 int GetSifraVagona() const {return sifravagona;}
 int GetRazred() const {return razred;}

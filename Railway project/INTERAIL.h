@@ -10,6 +10,7 @@ private:
     int brojdrzava;
     datum DatumIzdavanja;
     bool celaEvropa;
+    int cena;
 public:
     Interail()
     {
@@ -17,8 +18,10 @@ public:
         DatumIzdavanja.dan = 1;
         DatumIzdavanja.mesec = 1;
         DatumIzdavanja.mesec = 2020;
+        cena = 50;
+        brojdrzava = 0;
     }
-    Interail(datum d, bool evropa)
+    Interail(datum d, bool evropa, int c)
     {
         if(evropa==true)
         {
@@ -38,6 +41,7 @@ public:
         DatumIzdavanja.dan = d.dan;
         DatumIzdavanja.mesec = d.mesec;
         DatumIzdavanja.godina = d.godina;
+    cena = c;
     }
     Interail(const Interail &rail)
     {
@@ -60,15 +64,18 @@ celaEvropa = rail.celaEvropa;
             }
         }
         DatumIzdavanja = rail.DatumIzdavanja;
+        cena = rail.cena;
     }
 datum GetDatumIzdavanja() const {return DatumIzdavanja;}
 int GetBrojDrzava () const {return brojdrzava;}
 bool GetCelaEvropa() const {return celaEvropa;}
 char** GetDrzave() const {return drzave;}
+int GetCena() const{return cena;}
  void SetDrzave(char** s){drzave = s;}
  void SetBrojDrzava(int b) {brojdrzava = b;}
  void SetDatumIzdavanja(datum d){DatumIzdavanja = d;}
  void SetCelaEvropa(bool b){celaEvropa = b;}
+ void SetCena(int c){cena = c;}
 };
 
 #endif // INTERAIL_H_INCLUDED
