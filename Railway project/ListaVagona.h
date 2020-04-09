@@ -18,10 +18,11 @@ public:
     {
         head=kraj=NULL;
     }
+
    void addVagon(Vagon* vagon)
     {
         Polje* newVagon = new Polje();
-        newVagon->vagon = vagon;
+       newVagon->vagon = vagon;
         newVagon->next = NULL;
         if(head == NULL)
         {
@@ -57,8 +58,8 @@ return help->vagon;
      if(head->next==NULL)
      {
          Polje* help = head;
-         delete(help->vagon);
-         delete (help);
+        delete(help->vagon);
+        delete (help);
          head=NULL;
          return;
      }
@@ -72,6 +73,16 @@ help->next = NULL;
 kraj=help;
 
  }
+/* void KopirajListu(Lista* a)
+ {
+     Polje* help = a->head;
+     while(help!=NULL){
+     if(head==NULL)
+     {
+     head->vagon =
+     }
+     }
+ }*/
 void print()
 {
     Polje* help = head;

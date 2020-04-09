@@ -73,7 +73,9 @@ TicketPayment(char* g1, char* z1, bool glavna1, int broj1, char* n1, char* g2,
        datum p,  TipKarte t, int c, KARTICA tt, char* b, datum d, int s, VALUTA v, char* i, char* pp, datum dd, Pol pl, int broj):
            karta(new U(g1,z1,glavna1,broj1,n1,g2,z2,glavna2,broj2,n2,r,time,u,k,p,t,c)), Placanje<T>(tt,b,d,s,v), osoba(new Osoba(i,pp,dd,pl)),
         brojkarata(broj){total();}
-        TicketPayment(int broj, const Osoba o,const U k): brojkarata(broj), osoba(new Osoba((o))), karta(new U((k))){total();}
+        TicketPayment(int broj, const Osoba o,const U k, KARTICA tt, char* b, datum d, int s, VALUTA v): brojkarata(broj), osoba(new Osoba((o))), karta(new U((k))), Placanje<T>(tt,b,d,s,v){total();}
+        TicketPayment(int broj, const Osoba o,const U k, Kes kk, VALUTA v): brojkarata(broj), osoba(new Osoba((o))), karta(new U((k))), Placanje<T>(kk,v){total();}
+
         int GetBrojKarata() const {return brojkarata;}
         int GetUkupnaCena() const {return ukupnacena;}
         Osoba* GetOsoba() const {return osoba;}

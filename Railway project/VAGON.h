@@ -15,12 +15,13 @@ virtual int GetBrojSedista(void) const{printf("Ovaj vagon nema ovu funkciju!");
 return -1;}
 virtual void SetBrojsedista(int){printf("Ovaj vagon nema ovu funkciju");}
 virtual char* GetTip() const{
-printf("Ovaj vagon nema posebne vrste!");
+return "Ovaj vagon nema posebne vrste!";
 };
 virtual void SetTip(int){printf("Ovaj vagon nema posebne vrste!");}
 virtual bool GetOprema()const {printf("Ovaj vagon nema posebnu opremu!");}
 virtual void SetOprema(bool){printf("Ovaj vagon nema posebnu opremu!");}
-virtual int GetBrojKupea()const {printf("Ovaj vagon nema kupee!");}
+virtual int GetBrojKupea()const {printf("Ovaj vagon nema kupee!");
+return -1;}
 virtual void SetBrojKupea(int){printf("Ovaj vagon nema kupe-e!");}
 virtual bool GetPrilagodjenzaPosebnePotrebe()const{printf("Ovaj vagon nema tu mogucnost!");}
 virtual void SetPrilagodjenzaPosebnePotrebe(bool){printf("Ovaj vagon nema tu mogucnost!");}
@@ -28,7 +29,7 @@ virtual bool GetKonobar()const{printf("Ovaj vagon nema konobara!");}
 virtual void SetKonobar(bool){printf("Ovaj vagon nema konobara!");}
 virtual int GetMasaRobe()const{printf("Ovaj vagon nema robu!");}
 virtual void SetMasaRobe(int){printf("Ovaj vagon nema robu!");}
-virtual char* GetNazivRobe()const{printf("Ovaj vagon nema robu!");}
+virtual char* GetNazivRobe(){printf("Ovaj vagon nema robu!");}
 virtual void SetNazivRobe(char*){printf("Ovaj vagon nema robu!");}
 Vagon()
 {

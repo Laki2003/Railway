@@ -176,7 +176,7 @@ protected:
             {
                 int m;
                 VRSTAROBE v;
-                char n[100];
+                char n[30];
                 printf("Unesite masu robe: ");
                 scanf("%i", &m);
                 printf("Unesite vrstu robe: 1. Radioaktivno, 2. OSTALO\n");
@@ -193,7 +193,7 @@ protected:
                 else
                     v = OSTALO;
                 printf("Unesite naziv robe: ");
-                scanf("%s", n);
+              scanf("%s", n);
 
                 vagoni->addVagon(new Teretni(m, v, n, i, 0));
             }
@@ -254,6 +254,65 @@ public:
     {
 return vagoni;
     }
+    Voz(Voz& a): sifravoza(a.sifravoza), k(new Kompanija(*(a.k))), l(new Lokomotiva(*(a.l))), brojvagona(a.brojvagona), voz(a.voz), vagoni(new Lista()){
+
+for(int i=1;i<=brojvagona;++i)
+{
+
+
+    if(voz == TERETNI){
+   /* Teretni* v;
+    v = (Teretni*)((a.GetVagoni()->NadjiVagon(i)));
+Vagon *t = new Teretni(*(v));
+*/
+vagoni->addVagon(new Teretni(*(Teretni*)(a.GetVagoni()->NadjiVagon(i))));
+  //   delete (v);
+    // delete (t);
+    }
+   else if(voz == METRO){
+   /* Metro* v;
+    v =(Metro*)((a.GetVagoni()->NadjiVagon(i)));
+   Vagon* m = new Metro(*(v));
+*/
+   vagoni->addVagon(new Metro(*(Metro*)(a.GetVagoni()->NadjiVagon(i))));
+//   delete (v);
+  // delete (m);
+   }
+   else
+   {
+       if((a.GetVagoni()->NadjiVagon(i)->GetTip())=="Stof" || (a.GetVagoni()->NadjiVagon(i)->GetTip())=="Kozno"){
+/*Avion* v;
+v = (Avion*)((a.GetVagoni()->NadjiVagon(i)));
+    Vagon* a = new Avion(*(v));
+*/
+       vagoni->addVagon(new Avion(*((Avion*)(a.GetVagoni()->NadjiVagon(i)))));
+       //delete (a);
+       //delete (v);
+       }
+    else if((a.GetVagoni()->NadjiVagon(i)->GetTip())=="Kuset" || (a.GetVagoni()->NadjiVagon(i)->GetTip())=="Spavaca kola"){
+   /*  Kupe* v;
+     v = (Kupe*)((a.GetVagoni()->NadjiVagon(i)));
+     Vagon* k = new Kupe(*(v));
+*/
+            vagoni->addVagon(new Kupe(*(Kupe*)(a.GetVagoni()->NadjiVagon(i))));
+  //          delete (k);
+    //delete (v);
+    }
+    else{
+/*Restoran* v;
+v = (Restoran*)((a.GetVagoni()->NadjiVagon(i)));
+        Vagon* r = new Restoran(*(v));
+*/
+        vagoni->addVagon(new Restoran(*(Restoran*)(a.GetVagoni()->NadjiVagon(i))));
+  //      delete (r);
+    //      delete (v);
+           }
+
+   }
+}
+}
+
+
 
     char* GetSifraVoza() const
     {
