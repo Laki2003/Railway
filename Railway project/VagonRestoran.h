@@ -1,5 +1,6 @@
-#ifndef RESTORAN_H_INCLUDED
-#define RESTORAN_H_INCLUDED
+#ifndef VAGONRESTORAN_H_INCLUDED
+#define VAGONRESTORAN_H_INCLUDED
+
 #include "VAGON.h"
 enum MENI{CAFFE, ITALIJANSKI, FRANCUSKI, NEMACKI};
 class Restoran : public Vagon{
@@ -62,4 +63,4 @@ public:
     void SetKonobar(bool k){konobar = k;}
 };
 
-#endif // RESTORAN_H_INCLUDED
+#endif // VAGONRESTORAN_H_INCLUDED

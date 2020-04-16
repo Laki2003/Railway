@@ -5,15 +5,20 @@
 
 1584815165 c:\projekti\c projects\railway project\fip cards.h
 
-1586449270 source:c:\users\eho 3\desktop\git\railway\railway project\main.cpp
+1587035434 source:c:\users\eho 3\desktop\git\railway\railway project\main.cpp
 	<iostream>
 	"Voz.h"
 	"TICKETPAYMENT.h"
 
-1586184227 c:\users\eho 3\desktop\git\railway\railway project\fip cards.h
+1587030094 c:\users\eho 3\desktop\git\railway\railway project\fip cards.h
+	"RezervacijeiKarte.h"
 
-1586253052 c:\users\eho 3\desktop\git\railway\railway project\interail.h
+1587030053 c:\users\eho 3\desktop\git\railway\railway project\interail.h
 	"FIP CARDS.h"
+	"ListaDrzava.h"
+	<list>
+	<vector>
+	"RezervacijeiKarte.h"
 
 1586451974 c:\users\eho 3\desktop\git\railway\railway project\vagon.h
 	<typeinfo>
@@ -27,8 +32,9 @@
 1586089705 c:\users\eho 3\desktop\git\railway\railway project\kupe.h
 	"VAGON.h"
 
-1586245710 c:\users\eho 3\desktop\git\railway\railway project\rezervacija.h
+1587030053 c:\users\eho 3\desktop\git\railway\railway project\rezervacija.h
 	"ruta.h"
+	"RezervacijeiKarte.h"
 
 1586258524 c:\users\eho 3\desktop\git\railway\railway project\placanje.h
 	"KARTICE.h"
@@ -39,12 +45,13 @@
 1586081185 c:\users\eho 3\desktop\git\railway\railway project\metro.h
 	"VAGON.h"
 
-1586451388 c:\users\eho 3\desktop\git\railway\railway project\voz.h
+1586952033 c:\users\eho 3\desktop\git\railway\railway project\voz.h
 	"Kompanija.h"
 	"LOKOMOTIVA.h"
 	"ListaVagona.h"
 
-1585914763 c:\users\eho 3\desktop\git\railway\railway project\kompanija.h
+1586952008 c:\users\eho 3\desktop\git\railway\railway project\kompanija.h
+	<string.h>
 
 1585914879 c:\users\eho 3\desktop\git\railway\railway project\lokomotiva.h
 
@@ -54,12 +61,12 @@
 
 1585228527 c:\users\eho 3\desktop\git\railway\railway project\boost.h
 
-1586446289 c:\users\eho 3\desktop\git\railway\railway project\listavagona.h
-	"AVION.h"
-	"KUPE.h"
-	"RESTORAN.h"
-	"Teretni.h"
-	"Metro.h"
+1586945630 c:\users\eho 3\desktop\git\railway\railway project\listavagona.h
+	"VagonAvion.h"
+	"VagonKupe.h"
+	"VagonRestoran.h"
+	"VagonTeretni.h"
+	"VagonMetro.h"
 
 1585915265 c:\users\eho 3\desktop\git\railway\railway project\stanica.h
 	<vector>
@@ -68,10 +75,10 @@
 
 1585819913 c:\users\eho 3\desktop\git\railway\railway project\peron.h
 
-1585859115 c:\users\eho 3\desktop\git\railway\railway project\ruta.h
+1586977973 c:\users\eho 3\desktop\git\railway\railway project\ruta.h
 	"STANICA.h"
 
-1586429031 c:\users\eho 3\desktop\git\railway\railway project\ticketpayment.h
+1587030126 c:\users\eho 3\desktop\git\railway\railway project\ticketpayment.h
 	"PLACANJE.h"
 	"OSOBA.h"
 	"FIP CARDS.h"
@@ -79,10 +86,39 @@
 	"TICKET.h"
 	"REZERVACIJA.h"
 
-1585054446 c:\users\eho 3\desktop\git\railway\railway project\osoba.h
+1587028410 c:\users\eho 3\desktop\git\railway\railway project\osoba.h
 	"FIP CARDS.h"
+	"ListaKarata.h"
 
-1586247578 c:\users\eho 3\desktop\git\railway\railway project\ticket.h
+1587030053 c:\users\eho 3\desktop\git\railway\railway project\ticket.h
 	"FIP CARDS.h"
 	"ruta.h"
+	"RezervacijeiKarte.h"
+
+1586945368 c:\users\eho 3\desktop\git\railway\railway project\vagonavion.h
+	"VAGON.h"
+
+1586945370 c:\users\eho 3\desktop\git\railway\railway project\vagonkupe.h
+	"VAGON.h"
+
+1586945462 c:\users\eho 3\desktop\git\railway\railway project\vagonrestoran.h
+	"VAGON.h"
+
+1586945527 c:\users\eho 3\desktop\git\railway\railway project\vagonteretni.h
+	"VAGON.h"
+	<string.h>
+
+1586945415 c:\users\eho 3\desktop\git\railway\railway project\vagonmetro.h
+	"VAGON.h"
+
+1586970559 c:\users\eho 3\desktop\git\railway\railway project\listadrzava.h
+	"Kompanija.h"
+	<string.h>
+
+1586981238 c:\users\eho 3\desktop\git\railway\railway project\sifrakarte.h
+
+1587035588 c:\users\eho 3\desktop\git\railway\railway project\listakarata.h
+	"RezervacijeiKarte.h"
+
+1587030080 c:\users\eho 3\desktop\git\railway\railway project\rezervacijeikarte.h
 

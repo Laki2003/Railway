@@ -2,9 +2,10 @@
 #define TICKET_H_INCLUDED
 #include "FIP CARDS.h"
 #include "ruta.h"
+#include "RezervacijeiKarte.h"
 enum TipKarte {RETURN, ONEWAY};
 
-class Ticket
+class Ticket:public RezervacijeiKarte
 {
 protected:
     TipKarte tip;
@@ -12,9 +13,9 @@ protected:
     datum povratka;
     Ruta* r;
     char* sifravoza;
-    int cena;
+
 public:
-Ticket(): r(new Ruta()){
+Ticket(): r(new Ruta()), RezervacijeiKarte(){
 tip = ONEWAY;
 kretanja.dan = 1;
 kretanja.mesec = 1;
@@ -34,8 +35,8 @@ sifravoza = "100";
 cena = 50;
 }
 Ticket(char* g1, char* z1, bool glavna1, int broj1, char* n1, char* g2,
-       char* z2, bool glavna2, int broj2, char* n2, RUTA r, Vreme time, int u, datum k, datum p, TipKarte t, int c):
-           r(new Ruta(g1,z1,glavna1,broj1,n1,g2,z2,glavna2,broj2,n2, r,time,u)),tip(t),kretanja(k),cena(c)
+       char* z2, bool glavna2, int broj2, char* n2, tipRute r, Vreme time, int u, int start, int endp, datum k, datum p, TipKarte t, int c, int s):
+           r(new Ruta(g1,z1,glavna1,broj1,n1,g2,z2,glavna2,broj2,n2, r,time,u, start, endp)),tip(t),kretanja(k), RezervacijeiKarte(s,c)
        {
            if(tip==RETURN)
            {
@@ -48,12 +49,12 @@ Ticket(char* g1, char* z1, bool glavna1, int broj1, char* n1, char* g2,
             povratka.godina = 0;
            }
        }
-       Ticket(const Ticket& k): r(new Ruta(*(k.r))), tip(k.tip), kretanja(k.kretanja), povratka(k.povratka), sifravoza(k.sifravoza), cena(k.cena){}
+       Ticket(const Ticket& k): r(new Ruta(*(k.r))), tip(k.tip), kretanja(k.kretanja), povratka(k.povratka), sifravoza(k.sifravoza),RezervacijeiKarte(k.sifra, k.cena){}
     TipKarte GetTipKarte() const
     {
         return tip;
     }
-    datum GetKretanja() const
+    datum GetIzdavanja() const
     {
         return kretanja;
     }
@@ -69,14 +70,12 @@ Ticket(char* g1, char* z1, bool glavna1, int broj1, char* n1, char* g2,
     {
         return sifravoza;
     }
-    int GetCena()const{
-    return cena;
-    }
+
     void SetTipKarte(TipKarte t)
     {
         tip = t;
     }
-    void SetKretanja(datum k )
+    void SetIzdavanja(datum k )
     {
         kretanja = k;
     }
@@ -93,10 +92,7 @@ delete r;
     {
         sifravoza = s;
     }
-    void SetCena(int c)
-    {
-        cena= c;
-    }
+
 };
 
 #endif // TICKET_H_INCLUDED

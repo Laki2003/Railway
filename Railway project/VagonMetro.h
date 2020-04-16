@@ -1,5 +1,7 @@
-#ifndef METRO_H_INCLUDED
-#define METRO_H_INCLUDED
+#ifndef VAGONMETRO_H_INCLUDED
+#define VAGONMETRO_H_INCLUDED
+
+
 #include "VAGON.h"
 class Metro: public Vagon{
 
@@ -34,4 +36,4 @@ void SetOprema(bool G) {GPSMap = G;}
 void SetPrilagodjenzaPosebnePotrebe(bool p){prilagodjenPosebnePotrebe = p;}
 };
 
-#endif // METRO_H_INCLUDED
+#endif // VAGONMETRO_H_INCLUDED

@@ -1,5 +1,7 @@
-#ifndef AVION_H_INCLUDED
-#define AVION_H_INCLUDED
+#ifndef VAGONAVION_H_INCLUDED
+#define VAGONAVION_H_INCLUDED
+
+
 #include "VAGON.h"
 enum TIP {KOZNO, STOF};
 class Avion: public Vagon {
@@ -48,8 +50,11 @@ case 1:
      break;
     }
         }
-    void SetbrojSedista(int broj) {brojsedista = broj;}
+    void SetBrojsedista(int broj) {brojsedista = broj;}
     void SetOprema(bool s){sto = s;}
 };
 
-#endif // AVION_H_INCLUDED
+
+
+
+#endif // VAGONAVION_H_INCLUDED

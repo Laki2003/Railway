@@ -1,10 +1,10 @@
 #ifndef LISTAVAGONA_H_INCLUDED
 #define LISTAVAGONA_H_INCLUDED
-#include "AVION.h"
-#include "KUPE.h"
-#include "RESTORAN.h"
-#include "Teretni.h"
-#include "Metro.h"
+#include "VagonAvion.h"
+#include "VagonKupe.h"
+#include "VagonRestoran.h"
+#include "VagonTeretni.h"
+#include "VagonMetro.h"
  class Polje{
 public: Vagon* vagon;
 Polje* next;

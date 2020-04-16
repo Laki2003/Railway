@@ -245,7 +245,7 @@ public:
 
         }
     }
-    Voz(char* s, int o, char* Z, int p, int b, int g,int q, char* m, TOCKOVI t, MOTOR r, int w, VRSTAVOZA type): sifravoza(s), k(new Kompanija(o, Z, p)), l(new Lokomotiva(b,g,q,m,t,r)), brojvagona(w),voz(type), vagoni(new Lista())
+    Voz(char* s, int o, char* Z, char* n, int b, int g,int q, char* m, TOCKOVI t, MOTOR r, int w, VRSTAVOZA type): sifravoza(s), k(new Kompanija(o, Z, n)), l(new Lokomotiva(b,g,q,m,t,r)), brojvagona(w),voz(type), vagoni(new Lista())
     {
         unosVagona(0, brojvagona);
 
@@ -285,7 +285,7 @@ vagoni->addVagon(new Teretni(*(Teretni*)(a.GetVagoni()->NadjiVagon(i))));
 v = (Avion*)((a.GetVagoni()->NadjiVagon(i)));
     Vagon* a = new Avion(*(v));
 */
-       vagoni->addVagon(new Avion(*((Avion*)(a.GetVagoni()->NadjiVagon(i)))));
+       vagoni->addVagon(new Avion(*(Avion*)(a.GetVagoni()->NadjiVagon(i))));
        //delete (a);
        //delete (v);
        }

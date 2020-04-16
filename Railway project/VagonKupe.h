@@ -1,5 +1,7 @@
-#ifndef KUPE_H_INCLUDED
-#define KUPE_H_INCLUDED
+#ifndef VAGONKUPE_H_INCLUDED
+#define VAGONKUPE_H_INCLUDED
+
+
 #include "VAGON.h"
 enum KUPE{KUSET, SPAVACA_KOLA};
 
@@ -59,4 +61,7 @@ void SetOprema(bool k){klima = k;}
 void SetBrojKupea(int b){brojkupea = b;}
 };
 
-#endif // KUPE_H_INCLUDED
+
+
+
+#endif // VAGONKUPE_H_INCLUDED

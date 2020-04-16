@@ -1,5 +1,7 @@
-#ifndef TERETNI_H_INCLUDED
-#define TERETNI_H_INCLUDED
+#ifndef VAGONTERETNI_H_INCLUDED
+#define VAGONTERETNI_H_INCLUDED
+
+
 #include "VAGON.h"
 #include <string.h>
 enum VRSTAROBE{RID, OSTALO};
@@ -67,4 +69,4 @@ nazivrobe[i]='\0';
 }
 };
 
-#endif // TERETNI_H_INCLUDED
+#endif // VAGONTERETNI_H_INCLUDED

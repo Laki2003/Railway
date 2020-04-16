@@ -1,7 +1,7 @@
 #ifndef RUTA_H_INCLUDED
 #define RUTA_H_INCLUDED
 #include "STANICA.h"
-enum RUTA {GRADSKI, REGIONALNI, INTERNACIONALNI};
+enum tipRute {GRADSKI, REGIONALNI, INTERNACIONALNI};
 struct Vreme
 {
     int sati;
@@ -12,9 +12,10 @@ class Ruta
 private:
     Stanica* from;
     Stanica* to;
-    RUTA ruta;
+     tipRute ruta;
     Vreme v;
     unsigned int ucestalostmin;
+    int StartPeron, EndPeron;
 protected:
     void provera()
     {
@@ -95,27 +96,48 @@ protected:
             }
         }
         }
+        if(from->GetBrojPerona()<StartPeron)
+        {
+            while(from->GetBrojPerona()<StartPeron)
+            {
+                printf("Ne postoji ovaj peron!\n");
+                scanf("%i", &StartPeron);
+            }
+        }
+        if(to->GetBrojPerona()<EndPeron)
+        {
+            while(to->GetBrojPerona()<EndPeron)
+            {
+                printf("Ne postoji ovaj peron!\n");
+                scanf("%i", &EndPeron);
+            }
+        }
     }
     public:
-    Ruta():from(new Stanica()), to(new Stanica()), ruta(GRADSKI),v({5,0}), ucestalostmin(3){}
-    Ruta(char* g1, char* z1, bool glavna1, int broj1, char* n1, char* g2, char* z2, bool glavna2, int broj2, char* n2, RUTA r, Vreme time, int u):
-        from(new Stanica(g1,z1,glavna1,broj1,n1)), to(new Stanica(g2,z2,glavna2,broj2,n2)), ruta(r), v(time),ucestalostmin(u) {
+    Ruta():from(new Stanica()), to(new Stanica()), ruta(GRADSKI),v({5,0}), ucestalostmin(3), StartPeron(1), EndPeron(1){}
+    Ruta(char* g1, char* z1, bool glavna1, int broj1, char* n1, char* g2, char* z2, bool glavna2, int broj2, char* n2, tipRute r, Vreme time, int u, int start, int endp):
+        from(new Stanica(g1,z1,glavna1,broj1,n1)), to(new Stanica(g2,z2,glavna2,broj2,n2)), ruta(r), v(time),ucestalostmin(u), StartPeron(start), EndPeron(endp) {
   provera();
         }
-    Ruta(const Stanica &s1, const Stanica &s2, RUTA r, Vreme time, int u): from(new Stanica(s1)), to(new Stanica(s2)), ruta(r), v(time), ucestalostmin(u) {
+    Ruta(const Stanica &s1, const Stanica &s2, tipRute r, Vreme time, int u, int start, int endp): from(new Stanica(s1)), to(new Stanica(s2)), ruta(r), v(time), ucestalostmin(u), StartPeron(start), EndPeron(endp) {
     provera();
     }
-   Ruta(const Ruta& r):from(new Stanica(*(r.from))), to(new Stanica(*(r.to))), ruta(r.ruta), v(r.v), ucestalostmin(r.ucestalostmin) {
+   Ruta(const Ruta& r):from(new Stanica(*(r.from))), to(new Stanica(*(r.to))), ruta(r.ruta), v(r.v), ucestalostmin(r.ucestalostmin), StartPeron(r.StartPeron), EndPeron(r.EndPeron) {
 
     }
 Stanica* getFrom() const {return from;}
 Stanica* getTo() const {return to;}
-RUTA getRuta() const {return ruta;}
+tipRute getRuta() const {return ruta;}
 Vreme getV() const{return v;}
 int getUcestalost() const {return ucestalostmin;}
-void SetRuta(RUTA r){ruta = r;}
+int GetStartPeron() const {return StartPeron;}
+int GetEndPeron() const {return EndPeron;}
+
+void SetRuta(tipRute r){ruta = r;}
 void SetVreme(Vreme time){v = time;}
 void SetUcestalost(int u){ucestalostmin = u;}
+void SetStartPeron(int s){StartPeron = s;}
+void SetEndPeron(int e){EndPeron = e;}
 };
 
 #endif // RUTA_H_INCLUDED
